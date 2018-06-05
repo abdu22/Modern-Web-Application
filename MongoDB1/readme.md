@@ -1,4 +1,4 @@
-# Read Me
+# MongoDB
 
 1. Using Mongo Shell, Create a collecon
 homework7 and add one
