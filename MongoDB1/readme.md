@@ -9,4 +9,3 @@ message from MongoDB, decrypt the message (use crypto),  It’s
 encrypted with aes256 algorithm and the following key: asaadsaad
 3. Display the decrypted message in the browser using route
 (/secret).
-4. Upload your code to Github and submit your link in Sakai.
