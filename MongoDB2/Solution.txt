@@ -1,0 +1,36 @@
+﻿
+===================================================================================
+To import file.json
+
+./mongoimport -d lab8 -c restaurants /Users/abdurahmanmustefa/Downloads/restaurants.json
+===================================================================================
+======================================|LAB 8 |=====================================
+===================================================================================
+
+1) db.restaurants.find().prettey()
+
+2) db.restaurants.find({},{address:0,grades:0})
+
+3) db.restaurants.find({},{_id:0,address:0,grades:0})
+
+4) db.restaurants.find({},{restaurant_id:1,name:1,district:1,"address.zipcode":1,_id:0})
+
+5) db.restaurants.find({district:"Bronx"})
+
+6) db.restaurants.find({district:"Bronx"}).limit(5)
+
+7) db.restaurants.find({district:"Bronx"}).skip(5).limit(5)
+
+8) db.restaurants.find({"address.coord.0":{$lt:-95.754168}})
+
+9) db.restaurants.find({ $and:[{cuisine:{$ne:"America"}},
+
+                               {"grades.score":{$gt:70}},
+
+                               {"address.coord.0":{$lt:-65.754168}}
+
+                              ]
+                       })
+
+===================================================================================
+
