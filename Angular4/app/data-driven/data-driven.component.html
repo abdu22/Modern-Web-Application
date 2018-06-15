@@ -1,0 +1,28 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label> <br/>
+      <input type="text"
+             class="form-control"
+             id="username"
+             formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label><br/>
+      <input type="text"
+             class="form-control"
+             id="email"
+             formControlName="email">
+      <div *ngIf="!myForm.controls['userData'].controls['email'].valid">
+        Invalid Email
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Post</label><br/>
+      <textarea rows="4" cols="20" 
+              formControlName="post">
+        Testing
+        </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+  <button type="submit" class="btn btn-primary" >Get Data</button>
+</form>
